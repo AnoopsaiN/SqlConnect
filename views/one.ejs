@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body class="container" style="margin-top: 50px;">
+
+    <div class="card">
+        <div class="card-body">
+            <% if(data.length) { %> 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">S.no</th>
+                        <th scope="col">User ID</th>
+                        <th scope="col">password</th>
+                        <th scope="col">Admin Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 0; i< data.length; i++) { %>
+                    <tr>
+                        <th scope="row"><%= (i+1) %></th>
+                        <td><%= data[i].user_id%></td>
+                        <td><%= data[i].password%></td>
+                        <td><%= data[i].admin_type%></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <% } %>
+
+            <!-- if result is empty -->
+            <% if(!data.length) { %>
+            <p class="text-center">No sample found!</p>
+            <% } %>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sprint 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body class="container" style="margin-top: 50px;">
+
+    <div class="card">
+        <div class="card-body">
+            <% if(data.length) { %> 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">S.no</th>
+                        <th scope="col">Student ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Course ID</th>
+                        <th scope="col">Course Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 0; i< data.length; i++) { %>
+                    <tr>
+                        <th scope="row"><%= (i+1) %></th>
+                        <td><%= data[i].student_id%></td>
+                        <td><%= data[i].first_name%></td>
+                        <td><%= data[i].course_id%></td>
+                        <td><%= data[i].course_name%></td>
+                        <!-- <td><%= data[i].author%></td> -->
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <% } %>
+
+            <!-- if result is empty -->
+            <% if(!data.length) { %>
+            <p class="text-center">No sample found!</p>
+            <% } %>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
