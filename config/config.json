@@ -3,7 +3,7 @@
     "host": "localhost",
     "user": "root",
     "password": "root",
-    "database": "muletrainingdb"
+    "database": "random"
   },
   "port":"5000"
 }
