@@ -3,7 +3,7 @@
     "host": "localhost",
     "user": "root",
     "password": "root",
-    "database": "random"
+    "database": "db_6160_project_team1_sprint3"
   },
   "port":"5000"
 }

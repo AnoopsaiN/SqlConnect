@@ -16,16 +16,31 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Price</th>
+                        <th scope="col">S.no</th>
+                        <th scope="col">Student ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Year Enrolled</th>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Degree Program</th>
+                        <th scope="col">Degree Type</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
-
+                    <% for(var i = 0; i< data.length; i++) { %>
                     <tr>
-                        <td><%= data[0].name%></td>
-                        <td><%= data[0].price%></td>
+                        <th scope="row"><%= (i+1) %></th>
+                        <td><%= data[i].student_id%></td>
+                        <td><%= data[i].first_name%></td>
+                        <td><%= data[i].last_name%></td>
+                        <td><%= data[i].year_enrolled%></td>
+                        <td><%= data[i].semester%></td>
+                        <td><%= data[i].degree_program%></td>
+                        <td><%= data[i].degree_type%></td>
+                        <!-- <td><%= data[i].author%></td> -->
                     </tr>
+                    <% } %>
                 </tbody>
             </table>
             <% } %>
